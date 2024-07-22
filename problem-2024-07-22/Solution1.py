@@ -6,6 +6,8 @@ def check_odd_or_even(N) :
     else:
         print(f"{N} is Odd Number")
 
-
-num = int(input('Enter a Positive Interger : '))
-check_odd_or_even(num)
+try:
+    num = int(input('Enter a Positive Interger : '))
+    check_odd_or_even(num)
+except ValueError:
+    print("Invalid input! Please enter a valid integer.")
