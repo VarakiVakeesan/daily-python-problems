@@ -6,8 +6,12 @@ def check_odd_or_even(N) :
     else:
         print(f"{N} is Odd Number")
 
-try:
-    num = int(input('Enter a Positive Interger : '))
-    check_odd_or_even(num)
-except ValueError:
-    print("Invalid input! Please enter a valid integer.")
+while True:
+    try:
+        num = int(input('Enter a Positive Integer: '))
+        if num <= 0:
+            raise ValueError("The number is not positive.")
+        check_odd_or_even(num)
+        break
+    except ValueError as e:
+        print(f"Invalid input type! {e}")
