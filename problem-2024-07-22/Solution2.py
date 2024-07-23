@@ -2,5 +2,5 @@
 
 a=int(input('Enter Valid Interger for Base:'))
 b=int(input('Enter Valid Interger for Exponent:'))
-print(int(pow(a,b) % 10))
-
+print('First Method : ',int(pow(a,b) % 10))
+print('Updated Method : ',pow(a,b,10))
