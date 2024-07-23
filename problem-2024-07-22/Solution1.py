@@ -12,6 +12,6 @@ while True:
         if num <= 0:
             raise ValueError("The number is not positive.")
         check_odd_or_even(num)
-        break
+        break  
     except ValueError as e:
-        print(f"Invalid input type! {e}")
+        print(f"Invalid input! {e}")
