@@ -3,12 +3,16 @@
 def evenlyDivides (N):
         num=N
         count=0 
+        # To store unique digits that evenly divide N
+        unique_digits = set()
         while num!=0:
             r=num%10
             if r != 0 and N % r == 0:
-                count=count+1
+                unique_digits.add(r)
+                #count=count+1
             num=num//10
-        return count
+        #return count
+        return len(unique_digits)
 
 N=int(input('Enter a Positive Integer : '))
 res = evenlyDivides(N)
